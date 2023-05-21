@@ -29,7 +29,7 @@ p = subprocess.Popen(
 stdout, stderr = p.communicate()
 
 if p.returncode != 1:
-    raise SystemExit('%s did not fail with exit code 1' % ' '.join(cmd))
+    raise SystemExit(f"{' '.join(cmd)} did not fail with exit code 1")
 
 if 'Invalid argument'.encode() not in stderr:
     raise SystemExit(
